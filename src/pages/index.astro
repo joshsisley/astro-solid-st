@@ -1,0 +1,17 @@
+---
+// Component Imports
+import Layout from "../layouts/Page.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import PageHeader from "../components/PageHeader.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <PageHeader />
+	<h1>{SITE_TITLE}</h1>
+	<p>
+    Welcome to my personal site, a Defense and Engineering Blog!
+  </p>
+</Layout>
