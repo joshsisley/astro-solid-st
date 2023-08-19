@@ -232,3 +232,38 @@ a {
 .quote-child>*:last-child:after {
   content: '”';
 }
+
+.info-link a:hover .link-arrow {
+  transform: translateY(4px) translateZ(0px);
+}
+
+.info-link a .link-icon-circle svg .text-primary {
+  transition: transform .6s ease-out;
+}
+
+.info-link a:hover .link-icon-circle svg .text-primary {
+  stroke-dashoffset: 0;
+  animation: firstLine .2s ease 0s 1 normal;
+}
+
+@keyframes firstLine {
+  0% {
+    stroke-dashoffset: 175.92918860102841;
+  }
+
+  40% {
+    stroke-dashoffset: 150;
+  }
+
+  60% {
+    stroke-dashoffset: 90;
+  }
+
+  85% {
+    stroke-dashoffset: 69;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

@@ -2,14 +2,38 @@
 // Component Imports
 import Layout from "../layouts/Page.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import PageHeader from "../components/PageHeader.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
+const title = "Hi, I'm Josh Sisley, I'm a Lead Software Engineer."
+const description = "Lead Front End Engineer 🚀 | Passionate about Geopolitics & National Defense 🛡 | Fueled by ☕️ & a desire to make a difference 🌍"
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-	<h1>About Me</h1>
-	<p>
-    Welcome to the about me page!
-  </p>
+	<PageHeader title={title} description={description} />
+	<div class="relative mx-10vw">
+    <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl mb-24 mt-16 lg:mb-48">
+      <div class="col-span-full mb-12 lg:col-span-4 lg:mb-0">
+        <h2 class="text-lg font-medium text-black dark:text-white">How I got where we are now.</h2>
+      </div>
+      <div class="col-span-full mb-8 lg:col-span-8 lg:mb-20">
+        <p class="leading-tight text-3xl md:text-4xl text-black dark:text-white mb-8">
+          I always thought my dream was to be a meteorologist for institutions that focused on severe storm research.
+        </p>
+        <p class="leading-tight text-3xl md:text-4xl text-gray-400 dark:text-slate-500 mb-12">
+          It seemed like an appropriate dream at the time because of my interest in storm chasing. I loved going storm chasing and in particular the thrill that it gave me when I was able to watch a storm go from a small cloud to a large supercell. This guided me to get my degree in Meteorology, but in the end, I just felt like it was not what I was supposed to do.
+        </p>
+        <div class="w-full lg:pr-12 mb-12">
+          <img class="w-full rounded-lg object-cover" src="public/images/storm-chase.jpg" alt="Storm Chasing" />
+        </div>
+        <p class="leading-tight text-3xl md:text-4xl text-gray-400 dark:text-slate-500 mb-12">
+          Shortly after graduating, I took some time to try and find the spark that I was missing. I found that spark with the first web development tutorial that I started. Since then, I can not get enough. Programming to me is much like watching a powerful supercell go from a small cloud to the towering anvil. With programming, I am able to build a powerful and robust application starting from scratch. The same thrill that I got from storm chasing is the same thrill I now get with building brand new applications.
+        </p>
+        <p class="leading-tight text-3xl md:text-4xl text-gray-400 dark:text-slate-500 mb-12">
+          So now, in this industry, my passion and the thrill I get remains the same. I love that there is always more to learn, more problems to solve, and more to build.
+        </p>
+      </div>
+    </div>
+  </div>
 </Layout>

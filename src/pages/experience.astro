@@ -1,0 +1,16 @@
+---
+// Component Imports
+import Layout from "../layouts/Page.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import PageHeader from "../components/PageHeader.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+const title = "Hi, I'm Josh Sisley, I'm a Lead Software Engineer.";
+const description =
+  "Lead Front End Engineer 🚀 | Passionate about Geopolitics & National Defense 🛡 | Fueled by ☕️ & a desire to make a difference 🌍";
+---
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <PageHeader title={title} description={description} />
+</Layout>

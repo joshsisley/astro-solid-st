@@ -2,6 +2,8 @@
 import LinkButton from "./LinkButton";
 
 const { title, btnText, ...props } = Astro.props;
+
+const description = props.description;
 ---
 
 <div class="relative mx-10vw">
@@ -11,15 +13,30 @@ const { title, btnText, ...props } = Astro.props;
     </div>
 
     <div class="col-span-full pt-6 lg:col-start-1 lg:row-start-1 lg:flex lg:h-full lg:flex-col lg:col-span-5">
-      <div class="flex flex-auto flex-col">
+      <div class="flex flex-auto flex-col mb-12">
         <div class="opacity: 1; transform: none;">
-          <h2 class="leading-tight text-3xl md:text-4xl text-black dark:text-white">Testing text here</h2>
+          <h2 class="leading-tight text-3xl md:text-4xl text-black dark:text-white">{title}</h2>
         </div>
-        <div class="mt-14 flex flex-col space-y-4">
-          <div class="mr-auto flex flex-col gap-4">
-            <LinkButton text="Read the blog" href="/blog" type="primary" />
+        <div class="opacity: 1; transform: none;">
+          <p class="leading-tight text-3xl md:text-4xl text-gray-400 dark:text-slate-500 mt-3">
+            {description}
+          </p>
+        </div>
+      </div>
+      <div class="hidden pt-12 lg:block info-link">
+        <a class="text-primary inline-flex items-center text-left font-medium focus:outline-none cursor-pointer transition text-lg">
+          <div class="relative inline-flex h-14 w-14 flex-none items-center justify-center p-1">
+            <div class="absolute link-icon-circle text-gray-200 dark:text-gray-600">
+              <svg width="60" height="60"><circle stroke="currentColor" stroke-width="2" fill="transparent" r="28" cx="30" cy="30"></circle><circle class="text-primary" stroke="currentColor" stroke-width="2" fill="transparent" r="28" cx="30" cy="30" style="stroke-dasharray: 175.929, 175.929; transform: rotate(-90deg); transform-origin: 30px 30px;" transform-origin="30px 30px" stroke-dashoffset="175.92918860102841"></circle></svg>
+            </div>
+            <span class="link-arrow">
+              <svg class="transform rotate-0" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.101 5.5V23.1094L9.40108 17.4095L8.14807 18.6619L15.9862 26.5L23.852 18.6342L22.5996 17.3817L16.8725 23.1094V5.5H15.101Z" fill="currentColor"></path></svg>
+            </span>
           </div>
-        </div>
+          <span class="ml-8 text-xl font-medium">
+            Get to know me more
+          </span>
+        </a>
       </div>
     </div>
   </div>

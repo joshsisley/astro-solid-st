@@ -14,7 +14,7 @@ export default function LinkButton(props: Props) {
   return (
     <a href={props.href} class="group relative inline-flex text-lg font-medium focus:outline-none opacity-100 disabled:opacity-50 transition">
       <div class={classes}></div>
-      <div class={`relative flex h-full w-full items-center justify-center whitespace-nowrap text-${props.type === 'primary' ? 'inverse' : 'primary'} space-x-5 px-11 py-6`}>
+      <div class={`relative flex h-full w-full items-center justify-center whitespace-nowrap text-inverse space-x-5 px-11 py-6`}>
         {props.text}
       </div>
     </a>

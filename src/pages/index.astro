@@ -3,13 +3,33 @@
 import Layout from "../layouts/Page.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import PageHeader from "../components/PageHeader.astro";
+import LinkButton from "../components/LinkButton";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <PageHeader />
+  <div class="relative mx-10vw">
+    <div class="relative grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 lg:gap-x-6 mx-auto max-w-7xl lg: mb-24 h-auto pt-24 lg:min-h-[40rem] lg:pb-12 lg:mb-64">
+      <div class="col-span-full mb-12 lg:mb-0 flex items-center justify-center lg:col-span-7 lg:col-start-6 lg:-mr-5vw lg:-mt-24 lg:px-0">
+        image
+      </div>
+
+      <div class="col-span-full pt-6 lg:col-start-1 lg:row-start-1 lg:flex lg:h-full lg:flex-col lg:col-span-5">
+        <div class="flex flex-auto flex-col">
+          <div class="opacity: 1; transform: none;">
+            <h2 class="leading-tight text-3xl md:text-4xl text-black dark:text-white">Testing text here</h2>
+          </div>
+          <div class="mt-14 flex flex-col space-y-4">
+            <div class="mr-auto flex flex-col gap-4">
+              <LinkButton text="Read the blog" href="/blog" type="primary" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 	<h1>{SITE_TITLE}</h1>
 	<p>
     Welcome to my personal site, a Defense and Engineering Blog!

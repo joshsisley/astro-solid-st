@@ -66,15 +66,7 @@ const topics = await getCollection("topic");
           class="m-0 flex list-none flex-col items-start gap-2 px-2 py-4 pb-8 md:flex-row md:items-center md:justify-between md:p-0 md:py-2"
         >
           <HeaderLink href="/blog">Blog</HeaderLink>
-          <HeaderLink href="/projects">Projects</HeaderLink>
-          <HeaderLink href="/about">About</HeaderLink>
-          <!-- <HeaderLink
-            href="https://github.com/joshsisley"
-            target="_blank"
-          >
-            GitHub
-          </HeaderLink> -->
-          <!-- <HeaderDropdown href="/topics" linkText="Topics">
+          <HeaderDropdown href="/topics" linkText="Topics">
             {
               topics.map((topic) => (
                 <HeaderDropdownLink href={`/topics/${topic.slug}`}>
@@ -82,7 +74,17 @@ const topics = await getCollection("topic");
                 </HeaderDropdownLink>
               ))
             }
-          </HeaderDropdown> -->
+          </HeaderDropdown>
+          <!-- <HeaderLink href="/projects">Projects</HeaderLink> -->
+          <HeaderLink href="/experience">Experience</HeaderLink>
+          <HeaderLink href="/about">About</HeaderLink>
+          <!-- <HeaderLink href="https://bytesizedefense.com" target="_blank">Byte Size Defense</HeaderLink> -->
+          <!-- <HeaderLink
+            href="https://github.com/joshsisley"
+            target="_blank"
+          >
+            GitHub
+          </HeaderLink> -->
           <!-- <HeaderLink href="/search">
             <span class="mr-2 md:sr-only"> Search</span>
             <svg
