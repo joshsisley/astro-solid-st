@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+
+const socials = await getCollection("social");
+const { class: className } = Astro.props;
+---
+
+<div class={className}>
+  <ul class="social-list p-0">
+    {!!socials && socials.map((profile) => (
+      <li class="my-3">
+        <a href={profile.data.url} target="_blank">
+          <i class={`icon icon-${profile.slug}`}></i>
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

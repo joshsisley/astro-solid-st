@@ -55,6 +55,13 @@ module.exports = {
         500: 'var(--color-green-500)',
         600: 'var(--color-green-600)',
       },
+      cian: {
+        100: 'var(--color-cian-100)',
+        500: 'var(--color-cian-500)',
+      },
+      neon: {
+        100: 'var(--color-neon-100)',
+      },
     },
 
     extend: {

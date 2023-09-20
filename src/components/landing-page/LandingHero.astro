@@ -1,0 +1,17 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import LinkButton from "../LinkButton";
+import SocialList from "../SocialList.astro";
+import ExperienceOverview from "./ExperienceOverview.astro";
+---
+
+<div class="landing-hero flex justify-between mx-10vw h-[500px]">
+  <!-- Name, Description, Blog Button -->
+  <div class="md:max-w-[400px] py-20">
+    <h1 class="text-[3.5rem] font-bold tracking-wide">Josh Sisley</h1>
+    <!-- <h1 class="text-[3.5rem] font-bold tracking-wide">Sisley</h1> -->
+    <p class="text-lg text-secondary mt-6 mb-8">{SITE_DESCRIPTION}</p>
+    <LinkButton text="Read My Blog" href="/blog" type="primary" />
+  </div>
+  <SocialList class="absolute top-0 bottom-12 right-0 flex items-end" />
+</div>

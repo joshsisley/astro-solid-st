@@ -2,10 +2,10 @@
   --color-black: #000;
   --color-white: #fff;
   --color-blue-100: #e8f2ff;
-  --color-blue-500: #4b96ff;
+  --color-blue-500: #4e88c6;
   --color-slate-500: #a9adc1;
-  --color-gray-100: #f7f7f7;
-  --color-gray-200: #e6e9ee;
+  --color-gray-100: #fafbfd;
+  --color-gray-200: #f6f6f8;
   --color-gray-300: #dde0e4;
   --color-gray-400: #818890;
   --color-gray-500: #535661;
@@ -18,6 +18,9 @@
   --color-green-600: #68d94a;
   --color-red-500: #ff4545;
   --color-yellow-500: #ffd644;
+  --color-cian-100: #00FFFF;
+  --color-cian-500: #0D98BA;
+  --color-neon-100: #64ffda;
 
   --color-team-unknown: #818890;
   --color-team-blue: #36a3ff;
@@ -168,9 +171,31 @@ a {
   position: relative;
   text-decoration: none !important;
   white-space: nowrap;
+
+  &:focus {
+    outline: none;
+    text-decoration: none !important;
+  }
+
+  &:after {
+    content: '';
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+    transform-origin: left;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
 }
 
-.underlined:focus {
+.social-list ul li a img {
+  stroke: var(--color-gray-300);
+}
+
+/* .underlined:focus {
   outline: none;
   text-decoration: none !important;
 }
@@ -186,7 +211,7 @@ a {
   width: 100%;
   display: block;
   position: absolute;
-}
+} */
 
 .underlined:hover:after,
 .underlined:focus:after,
@@ -244,6 +269,53 @@ a {
 .info-link a:hover .link-icon-circle svg .text-primary {
   stroke-dashoffset: 0;
   animation: firstLine .2s ease 0s 1 normal;
+}
+
+.landing-hero {
+  position: relative;
+  &:before {
+    content: '';
+    background-image: url('/images/user-profile.svg');
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -10vw;
+    left: -10vw;
+    z-index: -999;
+  }
+}
+
+.dark .landing-hero:before {
+  background-image: url('/images/dark-user-profile.svg');
+}
+
+.icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  filter: invert(85%);
+}
+
+.icon-twitter {
+  background-image: url('/images/twitter.svg');
+}
+
+.icon-linkedin {
+  background-image: url('/images/linkedin.svg');
+}
+
+.icon-github {
+  background-image: url('/images/github.svg');
+}
+
+.semi-transparent {
+  filter: grayscale(100%) opacity(40%);
+}
+
+.dark .semi-transparent {
+  filter: grayscale(100%) opacity(70%);
 }
 
 @keyframes firstLine {

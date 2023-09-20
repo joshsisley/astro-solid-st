@@ -42,10 +42,18 @@ const topic = defineCollection({
   }),
 });
 
+const social = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    url: z.string(),
+    image: z.string(),
+  }),
+});
+
 const project = defineCollection({
   schema: z.object({
     title: z.string(),
   }),
 });
 
-export const collections = { blog, author, topic, project };
+export const collections = { blog, author, topic, project, social };

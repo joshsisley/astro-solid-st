@@ -4,5 +4,6 @@
 export const BRAND = "Sisley Tech";
 export const SITE_TITLE = "Joshua Sisley";
 export const SITE_URL = "https://sisley.tech";
-export const SITE_DESCRIPTION = "Welcome to my Defense and Engineering blog!";
+export const SITE_DESCRIPTION = "Passionate Lead Software Engineer with more than 8 years of experience working on high performance applications.";
+export const EXP_DESCRIPTION = "Passionate Lead Software Engineer with more than 8 years of experience working on high performance applications.";
 export const PAGINATION_POSTS_PER_PAGE = 5;
