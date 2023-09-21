@@ -81,6 +81,14 @@
   .text-highlight {
     @apply text-blue-500 dark:text-blue-500;
   }
+
+  .icon-blue {
+    @apply text-team-blue;
+  }
+
+  .icon-neon {
+    @apply text-neon-100;
+  }
 }
 
 /* @layer components {

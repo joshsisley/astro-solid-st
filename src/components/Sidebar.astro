@@ -1,0 +1,44 @@
+---
+
+---
+
+<style>
+  #sidebar {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    #sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: 70px;
+      flex-direction: column;
+      align-items: stretch;
+      border-right-width: 1px;
+      --tw-border-opacity: 1;
+      border-color: rgb(46 60 81 / var(--tw-border-opacity));
+      --tw-bg-opacity: 1;
+      background-color: rgb(22 30 41 / var(--tw-bg-opacity));
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #sidebar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+</style>
+<nav id="sidebar">
+  <a href="/" class="py-4 flex justify-center items-center gap-2">
+    <img src="/images/LE_logo.png" alt="Logo" class="w-8 h-8">
+  </a>
+</nav>

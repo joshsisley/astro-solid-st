@@ -1,7 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Sidebar from "../components/Sidebar.astro";
 
 type Props = {
   title: string;
@@ -16,17 +15,100 @@ const { frontmatter } = Astro.props;
 const title = frontmatter?.title || Astro.props.title;
 const description = frontmatter?.description || Astro.props.description;
 ---
+<style>
+  html {
+    position: relative;
+    scroll-padding: 2rem;
+    scroll-behavior: smooth;
+    --tw-bg-opacity: 1;
+    background-color: rgb(16 21 29 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(128 140 156 / var(--tw-text-opacity));
+  }
+  main {
+    --dot-size: 1.25px
+  }
+  @media (min-width: 640px) {
+    main {
+      --dot-size: 2px
+    }
+  }
+  main:after {
+    content: "";
+    animation: dotScroll 16s linear infinite;
+    background-image: radial-gradient(circle,#2e3c51 var(--dot-size),transparent 0);
+    background-size: calc(14.2857142857% - 1px) 100px;
+    background-position: -60px 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+  }
+  @keyframes dotScroll {
+    0% {
+      background-position-y: 140px
+    }
+
+    to {
+      background-position-y: 0
+    }
+  }
+  @media (min-width: 360px) {
+    main:after {
+      max-width:360px
+    }
+  }
+
+  @media (min-width: 400px) {
+    main:after {
+      max-width:400px
+    }
+  }
+
+  @media (min-width: 640px) {
+    main:after {
+      max-width:640px
+    }
+  }
+
+  @media (min-width: 768px) {
+    main:after {
+      max-width:768px
+    }
+  }
+
+  @media (min-width: 1024px) {
+    main:after {
+      max-width:1024px
+    }
+  }
+
+  @media (min-width: 1280px) {
+    main:after {
+      max-width:1280px
+    }
+  }
+
+  @media (min-width: 1536px) {
+    main:after {
+      max-width:1536px
+    }
+  }
+</style>
 
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
   </head>
 
-  <body class="bg-white transition duration-500 dark:bg-gray-900">
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body>
+    <div class="md:flex">
+      <Sidebar />
+      <main class="md:relative px-6 md:px-12 md:flex-1 min-w-0">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>

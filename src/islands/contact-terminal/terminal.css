@@ -42,7 +42,7 @@
     content: "";
     background: linear-gradient(to right, #2E3C51 0%, #2E3C51 34%, #2E3C51 49%, #fff 57%, #fff 64%, #A87FFB 66%, #25A6E9 100%);
     background-size: 300% 100%;
-    /* background-position: 0% 50%; */
+    background-position: 0% 50%;
     background-repeat: no-repeat;
     transition: background-position .8s ease;
     inset: -1px;
@@ -140,6 +140,7 @@
 }
 
 .terminal-open {
+  transition: transform .3s ease;
   animation: none;
   transform: translateY(0);
   &:hover {

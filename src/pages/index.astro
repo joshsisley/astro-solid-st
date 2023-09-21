@@ -2,34 +2,26 @@
 // Component Imports
 import Layout from "../layouts/Page.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import {HeroAnimation} from "../islands/hero-animation/HeroAnimation";
 import PageHeader from "../components/PageHeader.astro";
 import LinkButton from "../components/LinkButton";
 import LandingHero from "../components/landing-page/LandingHero.astro";
 import CompanyList from "../components/landing-page/CompanyList.astro";
 import ExperienceOverview from "../components/landing-page/ExperienceOverview.astro";
-import { ContactTerminal } from "../islands/ContactTerminal";
+import { ContactTerminal } from "../islands/contact-terminal/ContactTerminal";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<!-- <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
     <LandingHero />
     <section class="bg-secondary w-full px-10vw pb-16">
       <CompanyList />
       <ExperienceOverview />
     </section>
-    <!-- Blog Highlight -->
-    <section class="bg-primary w-full px-10vw pb-16">
-
-    </section>
-    <!-- Project Highlight -->
-    <section class="bg-secondary w-full px-10vw pb-16">
-
-    </section>
-    <!-- Contact Section -->
-    <section class="bg-primary w-full px-10vw pb-16">
-
-    </section>
+</Layout> -->
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <HeroAnimation client:load />
 </Layout>
 <ContactTerminal client:load />

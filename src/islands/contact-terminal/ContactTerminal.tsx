@@ -9,17 +9,11 @@ export const ContactTerminal = () => {
     message: ''
   });
 
-  const toggleTerminal = () => {
-    console.log('terminal toggle')
-    console.log(terminalOpen());
-    setTerminalOpen(!terminalOpen());
-  }
-
   return (
     <section class={terminalOpen() ? 'terminal terminal-open' : 'terminal'}>
       <form class="container">
         <div class="bg"></div>
-        <button onClick={() => toggleTerminal()} class="relative group w-full text-left flex items-center gap-6 text-gray-500 px-6 py-4">
+        <button onClick={() => setTerminalOpen(!terminalOpen())} class="relative group w-full text-left flex items-center gap-6 text-gray-500 px-6 py-4">
           <h2 class="flex-1 text-sm">Contact Me</h2>
           <div class="flex items-center gap-1 text-[13px] max-md:text-[#56657d]">
             Spaces: 2
@@ -32,17 +26,17 @@ export const ContactTerminal = () => {
 				waitlist to try it.</p>
           <div class="flex flex-col max-md:space-y-1">
             <div class="form-control-wrapper flex items-end gap-2">
-              <label htmlFor="request-name">Name</label>
+              <label for="request-name">Name</label>
               <span class="text-gray-500">......<span class="max-md:hidden">.......</span></span>
               <input class="form-control flex-1 py-2 -mb-1" type="text" id="request-name" name="name" maxlength="128" placeholder="{Enter}" required />
             </div>
             <div class="form-control-wrapper flex items-end gap-2">
-              <label htmlFor="request-name">Email</label>
+              <label for="request-name">Email</label>
               <span class="text-gray-500">......<span class="max-md:hidden">.......</span></span>
               <input class="form-control flex-1 py-2 -mb-1" autocomplete="email" type="email" id="request-email" name="email" maxlength="128" placeholder="{Enter}" required />
             </div>
             <div class="form-control-wrapper flex items-end gap-2">
-              <label htmlFor="request-name">Message</label>
+              <label for="request-name">Message</label>
               <span class="text-gray-500">......<span class="max-md:hidden">.......</span></span>
               <input class="form-control flex-1 py-2 -mb-1" type="message" id="request-message" name="message" maxlength="128" placeholder="{Enter}" required />
             </div>
